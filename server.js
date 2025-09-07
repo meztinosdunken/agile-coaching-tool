@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.send('OK');
+  res.json({ status: 'OK' });
 });
 
 // Error handling middleware
