@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Agile Coaching Tool!');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
